@@ -28,7 +28,6 @@
                                                 <rect key="frame" x="109" y="69.5" width="196.00000000000006" height="128"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="fob-ve-FIA" firstAttribute="centerX" secondItem="j4f-Ed-99q" secondAttribute="centerX" id="gK9-9b-hMS"/>
                                             <constraint firstItem="fob-ve-FIA" firstAttribute="centerY" secondItem="j4f-Ed-99q" secondAttribute="centerY" id="vqS-ST-L0q"/>
@@ -37,24 +36,31 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-1A-t52" userLabel="middle view">
                                         <rect key="frame" x="0.0" y="275.5" width="414" height="267"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="byy-HO-8ji">
-                                                <rect key="frame" x="20" y="20" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="m90-KJ-Ihg">
-                                                <rect key="frame" x="158" y="20" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="emj-JK-W95">
+                                                <rect key="frame" x="82" y="83.5" width="250" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="byy-HO-8ji">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceTwo" translatesAutoresizingMaskIntoConstraints="NO" id="m90-KJ-Ihg">
+                                                        <rect key="frame" x="150" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="emj-JK-W95" firstAttribute="centerY" secondItem="ad8-1A-t52" secondAttribute="centerY" id="BmA-Bc-3Ow"/>
+                                            <constraint firstItem="emj-JK-W95" firstAttribute="centerX" secondItem="ad8-1A-t52" secondAttribute="centerX" id="lhP-Fs-0cN"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3x-hQ-x2x" userLabel="bottom view">
                                         <rect key="frame" x="0.0" y="550.5" width="414" height="267.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-Nc-wzy">
-                                                <rect key="frame" x="157" y="110" width="100" height="48"/>
+                                                <rect key="frame" x="157" y="109" width="100" height="50"/>
                                                 <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aBO-nw-n6Z"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="cfi-3Y-cfa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -66,7 +72,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="vxF-Nc-wzy" firstAttribute="centerX" secondItem="g3x-hQ-x2x" secondAttribute="centerX" id="92b-bt-l3a"/>
                                             <constraint firstItem="vxF-Nc-wzy" firstAttribute="centerY" secondItem="g3x-hQ-x2x" secondAttribute="centerY" id="LHk-Ua-fiX"/>
